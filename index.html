@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- custom css -->
+    <link rel="stylesheet" href="css//style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Responsive Images</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Same image different size</h2>
+            <!-- placeholder.co -->
+            <img
+                 srcset="https://placehold.co/320x320 320w, 
+                         https://placehold.co/640x400 640w, 
+                         https://placehold.co/1024x600 1024w"
+                 sizes="(max-width: 320px) 320px, 
+                        (max-width: 640px) 640px, 
+                        (max-width: 1024px) 1024px"
+                 src="https://placehold.co/640x400"
+                 alt="A placeholder image">
+        </section>
+
+        <section>
+            <h2>Same size but different resulution</h2>
+            <img 
+            srcset="https://placehold.co/320,
+                    https://placehold.co/480 1.5x,
+                    https://placehold.co/640 2x,
+                    https://placehold.co/960 3x"
+            src="https://placehold.co/640" 
+            class="avatar"
+            alt="placehold">
+        </section>
+
+        <section>
+            <h2>Art Direction</h2>
+          <picture>
+            <source
+              srcset="images/fall-dog-1200.jpg,
+                  images/fall-dog-2400.jpg 2x,
+                  images/fall-dog-3600.jpg 3x" 
+              media="(min-width: 900px)" />
+              <source
+              srcset="images/fall-dog-900.jpg,
+                  images/fall-dog-1800.jpg 2x,
+                  images/fall-dog-2700.jpg 3x" 
+              media="(min-width: 640px)" />
+              <source
+              srcset="images/fall-dog-600.jpg,
+                  images/fall-dog-1200.jpg 2x,
+                  images/fall-dog-1800.jpg 3x" 
+              media="(min-width: 320px)" />
+            <img src="images/fall-dog-900.jpg" alt="A dog sitting on sofa">
+           </picture>
+        </section>
+    </main>
+</body>
+</html>
